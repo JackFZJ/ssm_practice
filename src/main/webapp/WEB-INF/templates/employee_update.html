@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>update employee</title>
+</head>
+<body>
+<form th:action="@{/employee}" method="post">
+    <input type="hidden" name="_method" value="put">
+    <input type="hidden" name="empId" th:value="${employee.empId}">
+    empName:<input type="text" name="empName" th:value="${employee.empName}"><br>
+    gender:<input type="text" name="gender" th:value="${employee.gender}"><br>
+    age:<input type="text" name="age" th:value="${employee.age}"><br>
+    email:<input type="text" name="email" th:value="${employee.email}"><br>
+    <input type="submit" value="update"><br>
+</form>
+</body>
+</html>
